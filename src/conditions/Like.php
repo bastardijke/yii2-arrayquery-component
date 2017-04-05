@@ -23,6 +23,6 @@ class Like extends Condition
      */
     public function matches($data)
     {
-        return is_string($data) && stripos($data, $this->value) !== false;
+        return is_string($data) && mb_stripos($data, $this->value , 0 , 'utf-8' ) !== false;
     }
 }
